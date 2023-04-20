@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
@@ -13,6 +15,7 @@ class HardSkil(models.Model):
             MinValueValidator(1)
         ]
     )
+    pub_date = models.DateTimeField(default=datetime.datetime.now())
 
 
 class Training(models.Model):
