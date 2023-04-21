@@ -1,0 +1,174 @@
+.firstName{
+	color: #6ccaf8;
+}
+
+.lastName{
+	color: #d35b1a;
+}
+
+.menu li{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.menu li:hover{
+	font-size: 20px;
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #5233b7;
+  }
+  
+  .header .logo a{
+	color: #f3f3f3;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 30px;
+	display: flex;
+  }
+
+  .header .menu ul {
+	display: flex;
+	list-style: none;
+  }
+  
+  .header .menu ul li {
+	margin: 20px 10px;
+  }
+  
+  .header .menu ul a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff;
+  }
+  
+  .header .menu ul ul {
+	  display: none;
+	  position: absolute; 
+  }
+  .header .menu ul li:hover > ul {
+	  display: inherit;
+  }
+			  
+  .header .menu ul ul div li {
+	  min-width: 170px;
+	  margin-left: 20px;
+	  float: none;
+	  display: list-item;
+	  position: relative;
+  }
+  
+  .header .menu ul ul li a {
+	  color: #5233b7;
+	  margin-left: 20%;
+  }
+
+
+
+body {
+	background-color: #f8f8f8;
+	border-top: 5px solid #7e7e7e;
+	margin: 0;
+}
+input[type="text"] {
+	background-color: #f3f3f3;
+	border: 1px solid #e7e7e7;
+	height: 30px;
+	color: #b2b2b2;
+	padding: 0 10px;
+	vertical-align: top;
+}
+button {
+	background: #6ccaf8;
+	padding: .375em 1.125em;
+	margin-left: 20px;
+	font-size: 1rem;
+	text-transform: uppercase;
+  }
+  
+  button:active {
+	background: #302594;
+  }
+  
+  button:hover {
+	background: #3325ac;
+  }
+  
+  .textButton{
+	  color: #ffffff;
+	  border-radius: 4px;
+	  border: #302594;
+  }
+
+h1{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+p {
+	margin: 20px 0;
+}
+
+#wrapper {
+	max-width: 960px;
+	margin: auto;
+}
+
+
+
+form[name="search"] {
+	float: right;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	list-style-position: inside;
+	font: 14px 'Oswald', sans-serif;
+	padding: 10px;
+}
+
+.top-menu li {
+	display: inline-block;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li.active {
+	background: #29c5e6;
+	color: #fff;
+}
+
+.top-menu a {
+	color: #b2b2b2;
+}
+.training{
+	border-radius: 10px;
+	background-color: #d8d5d53b;
+	padding: 15px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	margin: 3%;
+}
+
+.trainingText{
+	margin: 20px;
+	font-size: 20px;
+	display: flex;
+}
+
+
+.titleDt{
+	margin-right: 20px;
+}
