@@ -1,18 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');
+
 .firstName{
 	color: #6ccaf8;
+	font-family: 'Bruno Ace SC', cursive;
 }
 
 .lastName{
 	color: #d35b1a;
+	font-family: 'Bruno Ace SC', cursive;
 }
 
-.menu li{
+.menu a{
 	font-weight: bold;
 	font-size: 18px;
+	font-family: 'Bruno Ace SC', cursive;
 }
 
 .menu li:hover{
 	font-size: 20px;
+}
+
+.logo{
+	background-color: #1e1e1e;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20%;
 }
 
 .header {
@@ -83,19 +97,23 @@ input[type="text"] {
 	vertical-align: top;
 }
 button {
-	background: #6ccaf8;
+	background: #1e1e1e;
 	padding: .375em 1.125em;
 	margin-left: 20px;
 	font-size: 1rem;
 	text-transform: uppercase;
+	font-weight: bold;
+	opacity: 0.7;
+	font-size: 18px;
+	font-family: 'Bruno Ace SC', cursive;
   }
   
   button:active {
-	background: #302594;
+	background: #ffe609;
   }
   
   button:hover {
-	background: #3325ac;
+	opacity: 1;
   }
   
   .textButton{
@@ -171,4 +189,58 @@ nav li {
 
 .titleDt{
 	margin-right: 20px;
+}
+
+.skills{
+	border-radius: 10px;
+	background-color: #d8d5d53b;
+	padding: 15px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	margin: 3%;
+	display: flex;
+	align-items: center;	
+}
+.skills img{
+	width: 100px;
+}
+
+.icons{
+	margin-right: 20px;
+}
+
+.titleSkl{
+	padding-left: 10px;
+	border-radius: 20px;
+	color: #29c5e6;
+}
+
+.textSkils{
+	margin-right: 5%;
+}
+
+.training img{
+	width: 50%;
+}
+
+
+.upbtn {
+    opacity: 0.8;
+    z-index: 9999;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: -80px;
+    right: 20px;
+    cursor: pointer;
+    border:3px solid #9a84e3;
+    transition: all .7s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #5233b7a7;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ0NC44MTkgNDQ0LjgxOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ0LjgxOSA0NDQuODE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzMy45NjgsMjc4LjY1N0wyNDguMzg3LDkyLjc5Yy03LjQxOS03LjA0NC0xNi4wOC0xMC41NjYtMjUuOTc3LTEwLjU2NmMtMTAuMDg4LDAtMTguNjUyLDMuNTIxLTI1LjY5NywxMC41NjYgICBMMTAuODQ4LDI3OC42NTdDMy42MTUsMjg1Ljg4NywwLDI5NC41NDksMCwzMDQuNjM3YzAsMTAuMjgsMy42MTksMTguODQzLDEwLjg0OCwyNS42OTNsMjEuNDExLDIxLjQxMyAgIGM2Ljg1NCw3LjIzLDE1LjQyLDEwLjg1MiwyNS42OTcsMTAuODUyYzEwLjI3OCwwLDE4Ljg0Mi0zLjYyMSwyNS42OTctMTAuODUyTDIyMi40MSwyMTMuMjcxTDM2MS4xNjgsMzUxLjc0ICAgYzYuODQ4LDcuMjI4LDE1LjQxMywxMC44NTIsMjUuNywxMC44NTJjMTAuMDgyLDAsMTguNzQ3LTMuNjI0LDI1Ljk3NS0xMC44NTJsMjEuNDA5LTIxLjQxMiAgIGM3LjA0My03LjA0MywxMC41NjctMTUuNjA4LDEwLjU2Ny0yNS42OTNDNDQ0LjgxOSwyOTQuNTQ1LDQ0MS4yMDUsMjg1Ljg4NCw0MzMuOTY4LDI3OC42NTd6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)
+}
+.upbtn:hover {
+    opacity: 1;
+    background-color: #5233b7;
 }

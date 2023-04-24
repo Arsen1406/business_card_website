@@ -1,5 +1,4 @@
 from datetime import timedelta
-
 from django.shortcuts import render
 from .models import HardSkil, Training
 
@@ -15,7 +14,7 @@ def delta_time(begin, end):
 
 def about(requests):
     template = 'about/about-me.html'
-    title = 'Страница обо мне'
+    title = 'Об Авторе'
     context = {
         'title': title
     }
@@ -23,9 +22,9 @@ def about(requests):
 
 
 def skills(requests):
-    all_skills = HardSkil.objects.all()
+    all_skills = HardSkil.objects.prefetch_related('course').all()
     template = 'about/skills.html'
-    title = 'Мои навыки и технологии'
+    title = 'Навыки и технологии'
     context = {
         'title': title,
         'all_skills': all_skills
@@ -36,7 +35,7 @@ def skills(requests):
 def training(requests):
     all_training = Training.objects.all()
     template = 'about/training.html'
-    title = 'Где я учился?'
+    title = 'Образование'
     context = {
         'title': title,
         'all_training': all_training

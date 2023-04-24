@@ -1,16 +1,38 @@
 {% extends 'base.html' %}
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
-
     <h1>{{ title }}</h1>
     {% for skill in all_skills %}
-        <div class="training" >
-        
-            <p>{{ skill.title }}</p>
-            <p>{{ skill.description }}</p>
-            <p>{{ skill.mastered }}</p>
-            <p>{{ skill.pub_date }}</p>
-        
+        <div class="skills" >
+            <div class="icons"> 
+                {% if skill.icon %}
+                    <img src="{{ skill.icon }}" alt="None">
+                {% else %}
+                {% endif %}
+            </div>
+            <div class="textSkils">
+                <dl class="trainingText">
+                    <dt class="titleDt" >Технология:</dt>
+                    <dd><div style="color: white; background-color: {{ skill.color }}; padding: 3px 10px 3px 10px; border-radius: 10px;" >{{ skill.title }}</div></dd>
+                </dl> 
+                <dl class="trainingText">
+                    <dt class="titleDt" >Описание:</dt>
+                    <dd>{{ skill.description }}</dd>
+                </dl> 
+                <dl class="trainingText">
+                    <dt class="titleDt" >Уровень знаний(1-10):</dt>
+                    <dd>{{ skill.mastered }}</dd>
+                </dl> 
+                <dl class="trainingText">
+                    <dt class="titleDt" >Где изучил:</dt>
+                    <dd>
+                        {% for course in skill.course.all %}
+                        <li>{{ course.title }} ({{ course.school }})</li>
+                        {% endfor %}
+                    </dd>
+                </dl> 
+            </div>
+
         </div>
         {% endfor %}
             

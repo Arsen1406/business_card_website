@@ -3,21 +3,39 @@
 {% block content %}
 
     <h1>{{ title }}</h1>
-    {% for training in all_training %}
+    {% for train in all_training %}
         <div class="training" >
             <dl class="trainingText">
                 <dt class="titleDt" >Курс:</dt>
-                <dd>{{ training.title }}</dd>
+                <dd>{{ train.title }}</dd>
             </dl> 
             <dl class="trainingText">
                 <dt class="titleDt" >Школа:</dt>
-                <dd>{{ training.school }}</dd>
+                <dd>{{ train.school }}</dd>
             </dl> 
             <dl class="trainingText">
                 <dt class="titleDt" >Период обучения:</dt>
-                <dd>{{ training.begin|date:"d E Y" }} - {{ training.end|date:"d E Y" }}</dd>
+                <dd>{{ train.begin|date:"d E Y" }} 
+                    {% if train.end %} - {{ train.end|date:"d E Y" }}
+                    {% else %}
+                    {% endif %}
+                </dd>
             </dl>
-            <img src="{{ training.certificate }}">
+            <dl class="trainingText">
+                <dt class="titleDt" >Что освоил:</dt>
+                <dd style="display:flex; border-radius: 10px;">
+                {% for skil in train.course.all %}
+                    <div style="color: white; background-color: {{ skil.color }}; padding: 3px 10px 3px 10px; border-radius: 0px; font-size: 17px;">
+                        {{ skil.title }}   
+                    </div>
+                {% endfor %}
+                            
+                </dd>
+            </dl>
+            {% if train.certificate %}
+                <img class="imgCertif" src="{{ train.certificate }}">
+            {% else %}
+            {% endif %}
         </div>
             
     {% endfor %}
